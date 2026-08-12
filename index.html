@@ -143,9 +143,7 @@
         }).addTo(map);
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
-            if (bounds_group.getLayers().length) {
-                map.fitBounds(bounds_group.getBounds());
-            }
+            map.setView([-25.5, 134], 4);
         }
         map.createPane('pane_OpenStreetMap_0');
         map.getPane('pane_OpenStreetMap_0').style.zIndex = 400;
@@ -154,7 +152,7 @@
             opacity: 1.0,
             attribution: '',
             minZoom: 1,
-            maxZoom: 28,
+            maxZoom: 19,
             minNativeZoom: 0,
             maxNativeZoom: 19
         });
